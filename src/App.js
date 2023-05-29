@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="App">
       <div class="title-container">
-        <h1 class="title">Memorize-Your-Words</h1>
+        <h1 class="title">Vocabulary Card</h1>
       </div>
       {!didSettingDone ? <TextInput setSettingDoneFlag={setDidSettingDoneFlag} setWords={addWords} words={words} /> : <MemoCardWrap words={words} deleteWord={deleteWord} />}
       <Container maxWidth="sm" component="footer">

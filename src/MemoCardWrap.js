@@ -19,9 +19,9 @@ function MemoCardWrap({ words, deleteWord }) {
     setIdx(Math.floor(Math.random() * (words.length - 1)));
   }
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', width: '100%', height: '100%', marginTop: '10%' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignContent: 'center', width: '50vw', height: '100%', marginTop: '10%' }}>
       {words.length === 0 ? <h1>다 외웠다.!</h1> : <MemoCard word={words[wordIdx]} />}
-      <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignContent: 'center', marginTop: '10%' }}>
         <IconButton variant="text" size="large" onClick={() => {
           onDeleteClick();
           // moveNext();

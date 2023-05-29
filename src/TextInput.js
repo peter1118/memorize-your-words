@@ -20,10 +20,10 @@ function TextInput({ setSettingDoneFlag, setWords, words }) {
     }
 
     return (
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', width: '50%' }}>
             <div class="word-list">
                 {words.map(ele => {
-                    return (<span key={ele}>{ele}</span>)
+                    return (<p key={ele}>{ele}</p>)
                 })}
             </div>
             <Box
@@ -35,24 +35,24 @@ function TextInput({ setSettingDoneFlag, setWords, words }) {
             >
                 <TextField id="standard-basic" label="단어 입력" variant="standard" onKeyDown={handleEnter} value={inputText}
                     onChange={handleChange} />
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <Button variant="text" onClick={() => {
+                        updateWords();
+                    }}>
+                        단어 추가
+                    </Button>
+                    <div></div>
+                    <Button variant="text" onClick={() => {
+                        if (words.length < 2) {
+                            alert('2개 이상 단어 입력');
+                            return;
+                        }
+                        setSettingDoneFlag(true);
+                    }}>
+                        테스트 시작
+                    </Button>
+                </div>
             </Box>
-            <div>
-                <Button variant="text" onClick={() => {
-                    updateWords();
-                }}>
-                    단어 추가
-                </Button>
-                <div></div>
-                <Button variant="text" onClick={() => {
-                    if (words.length < 2) {
-                        alert('2개 이상 단어 입력');
-                        return;
-                    }
-                    setSettingDoneFlag(true);
-                }}>
-                    테스트 시작
-                </Button>
-            </div>
         </div>
     )
 }

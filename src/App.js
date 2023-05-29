@@ -27,7 +27,7 @@ function App() {
         <h1 class="title">Vocabulary Card</h1>
       </div>
       {!didSettingDone ? <TextInput setSettingDoneFlag={setDidSettingDoneFlag} setWords={addWords} words={words} /> : <MemoCardWrap words={words} deleteWord={deleteWord} />}
-      <Container maxWidth="sm" component="footer">
+      <Container maxWidth="sm" component="footer" style={{ position: 'fixed',position: 'fixed', bottom: 0, width: '100%', backgroundColor: '#ffffff' }}>
         <Typography variant="body2" color="textSecondary" align="center">
           {'Powered by '}
           <Link color="inherit" href="https://mui.com/">

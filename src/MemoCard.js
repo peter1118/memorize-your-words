@@ -9,8 +9,11 @@ function MemoCard({ word }) {
         sx={{
           width: '50vw',
           height: '10vh',
-          padding: '50px',
           fontWeight: '800',
+          display: 'flex',
+          justifyContent: 'center',
+          alignContent: 'center',
+          paddingTop: '3.5vh',
         }}
       >
         {word}

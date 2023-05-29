@@ -1,11 +1,8 @@
 .word-list {
   padding: 3% 10%;
-  display: flex; /* Flexbox 사용 */
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
-.word-list span {
+.word-list p {
   font-size: 20px; /* 글꼴 크기 조정 */
   font-weight: bold; /* 글꼴 굵기 설정 */
   color: #333; /* 텍스트 색상 설정 */
